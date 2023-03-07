@@ -1,0 +1,111 @@
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    position: relative;
+}
+
+/* Boton Hamburgesa */
+.btn {
+    padding: 10px 16px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 200;
+    font-size: 35px;
+    transition: .08s;
+}
+.btn:hover {
+    color: rgb(161, 161, 137);
+    cursor: pointer;
+}
+
+/* Lista Ejecutada con Boton Hamburguesa */
+.list {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: .3s;
+    translate: -100vw;
+}
+.list-visibility {
+    translate: 0vw;
+}
+.list__item {
+    width: 100%;
+    height: 20vh;
+    font-size: 30px;
+    border: 2px solid white;
+}
+.list__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: .05s;
+}
+.list__link:hover {
+    background-color: rgba(0, 0, 0, .2);
+    color: rgb(230, 150, 240);
+}
+
+/* Section */
+.section {
+    height: 100vh;
+    background-color: red;
+    border: 2px solid rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.section__title {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+}
+.section__paragraph {
+    width: 50%;
+    margin: 30px;
+    font-size: .8rem;
+    color: rgb(255, 255, 255);
+}
+
+/* Media query */
+/* @media screen and (min-width: 770px){
+    .btn {
+        display: none;
+    }
+    .list {
+        height: 2rem;
+        position: fixed;
+        top: 0;
+        display: flex;
+        list-style: none;
+        translate: 0vw;
+    }
+    .list__item {
+        height: 2rem;
+        font-size: 20px;
+    }
+    .section__title {
+        font-size: 2.5rem;
+    }
+    .section__paragraph {
+        margin: 20px;
+        font-size: 1.2rem;
+    }
+} */
